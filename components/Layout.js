@@ -7,7 +7,7 @@ export default function Layout({ children }) {
         <nav>
           <p>
             <Link href="/">
-              <a>My blog</a>
+              <a>r7kamura/nippo</a>
             </Link>
           </p>
         </nav>

@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import Head from "next/head";
 import Link from "next/link";
 import {
   getIssue,
@@ -8,6 +9,7 @@ import {
   type IssueComment,
 } from "../../lib/issue";
 import Time from "../../components/Time";
+import formatToDate from "../../lib/time";
 
 type Props = {
   issue: Issue;
@@ -17,6 +19,9 @@ type Props = {
 const ShowArticle: NextPage<Props> = ({ issue, issueComments }) => {
   return (
     <article>
+      <Head>
+        <title>{formatToDate(issue.created_at)}</title>
+      </Head>
       <section>
         <header>
           <h1>

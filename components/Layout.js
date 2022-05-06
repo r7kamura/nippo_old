@@ -1,13 +1,19 @@
+import Head from "next/head";
 import Link from "next/link";
+
+const siteTitle = "r7kamura/nippo";
 
 export default function Layout({ children }) {
   return (
     <>
       <header>
+        <Head>
+          <title>{siteTitle}</title>
+        </Head>
         <nav>
           <p>
             <Link href="/">
-              <a>r7kamura/nippo</a>
+              <a>{siteTitle}</a>
             </Link>
           </p>
         </nav>

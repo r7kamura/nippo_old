@@ -1,9 +1,10 @@
 import { format } from "date-fns";
+import formatToDate from "../lib/time";
 
 export default function Time({ dateTime }: { dateTime: string }) {
   return (
     <time dateTime={dateTime} title={dateTime}>
-      {format(new Date(dateTime), "yyyy年MM月dd日")}
+      {formatToDate(dateTime)}
     </time>
   );
 }

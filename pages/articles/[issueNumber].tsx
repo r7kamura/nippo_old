@@ -19,8 +19,9 @@ const ShowArticle: NextPage<Props> = ({ issue, issueComments }) => {
     <article>
       <section>
         <header>
-          <Time dateTime={issue.created_at} />
-          <h1>{issue.title}</h1>
+          <h1>
+            <Time dateTime={issue.created_at} />
+          </h1>
         </header>
         <aside>
           <p>

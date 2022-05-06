@@ -82,12 +82,6 @@ section li {
   margin-top: 2rem;
 }
 
-time {
-  color: var(--color-light);
-  display: block;
-  font-size: 0.8rem;
-}
-
 aside {
   color: var(--color-light);
   font-size: 0.8rem;

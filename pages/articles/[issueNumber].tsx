@@ -65,8 +65,8 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }: any) {
   const issueNumber = parseInt(params.issueNumber, 10);
-  const issue = getIssue({ issueNumber });
-  const issueComments = listIssueComments({ issueNumber });
+  const issue = await getIssue({ issueNumber });
+  const issueComments = await listIssueComments({ issueNumber });
   return {
     props: {
       issue,

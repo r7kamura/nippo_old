@@ -9,15 +9,15 @@ type Props = {
 type Issue = any;
 
 const Home: NextPage<Props> = ({ issues }) => {
+  console.log(issues);
+
   return (
     <section>
       <ol>
         {issues.map((issue) => (
           <li key={issue.number}>
             <Link href={`/articles/${issue.number}`}>
-              <a>
-                {issue.title}
-              </a>
+              <a>{issue.title}</a>
             </Link>
           </li>
         ))}
@@ -31,7 +31,7 @@ export default Home;
 export async function getStaticProps() {
   return {
     props: {
-      issues: listIssues(),
+      issues: await listIssues(),
     },
   };
 }

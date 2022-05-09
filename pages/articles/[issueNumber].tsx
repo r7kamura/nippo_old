@@ -8,8 +8,6 @@ import {
   type Issue,
   type IssueComment,
 } from "../../lib/issue";
-import Time from "../../components/Time";
-import formatToDate from "../../lib/time";
 
 type Props = {
   issue: Issue;
@@ -20,13 +18,11 @@ const ShowArticle: NextPage<Props> = ({ issue, issueComments }) => {
   return (
     <article>
       <Head>
-        <title>{formatToDate(issue.created_at)}</title>
+        <title>{issue.title}</title>
       </Head>
       <section>
         <header>
-          <h1>
-            <Time dateTime={issue.created_at} />
-          </h1>
+          <h1>{issue.title}</h1>
         </header>
         <aside>
           <p>

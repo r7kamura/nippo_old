@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 import Link from "next/link";
 import { listIssues } from "../lib/issue";
-import Time from "../components/Time";
 
 type Props = {
   issues: Array<Issue>;
@@ -17,7 +16,7 @@ const Home: NextPage<Props> = ({ issues }) => {
           <li key={issue.number}>
             <Link href={`/articles/${issue.number}`}>
               <a>
-                <Time dateTime={issue.created_at} />
+                {issue.title}
               </a>
             </Link>
           </li>

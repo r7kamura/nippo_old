@@ -50,7 +50,7 @@ const ShowArticle: NextPage<Props> = ({ issue, issueComments }) => {
 export default ShowArticle;
 
 export async function getStaticPaths() {
-  const paths = listIssues().map((issue) => {
+  const paths = (await listIssues()).map((issue) => {
     return {
       params: {
         issueNumber: issue.number.toString(),
